@@ -15,7 +15,7 @@ header {
 }
 
 .logo {
-    max-width: 300px; /* Taille du logo ajustée */
+    max-width: 300px;
     margin-bottom: 20px;
     animation: fadeIn 2s ease-in-out;
 }
