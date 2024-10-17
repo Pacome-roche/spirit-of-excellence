@@ -1,10 +1,11 @@
-/* Global Styles */
+/* Styles globaux */
 body {
     font-family: Arial, sans-serif;
     background-color: #1C0032;
     color: white;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 header {
@@ -14,8 +15,9 @@ header {
 }
 
 .logo {
-    max-width: 250px;
+    max-width: 300px; /* Taille du logo ajustée */
     margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
 }
 
 nav ul {
@@ -32,11 +34,28 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
+nav ul li a:hover {
+    color: #D4AF37; /* Couleur dorée au survol */
+}
+
+/* Styles pour les sections */
 section {
     padding: 40px;
     text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 1.5s forwards;
+}
+
+/* Styles pour les images */
+.image {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 10px;
 }
 
 footer {
@@ -46,4 +65,25 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
